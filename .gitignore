@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.pem
+*.key
+.DS_Store
+.idea/
+.vscode/
+.pytest_cache/
+*.log
+secrets/
+terraform.tfstate
+terraform.tfstate.*
+.terraform/

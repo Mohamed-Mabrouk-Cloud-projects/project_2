@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Company Job Application</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Job Application</h1>
+      <p class="subtitle">Submit your application securely.</p>
+
+      <form id="applicationForm">
+        <label for="name">Full Name *</label>
+        <input id="name" name="name" required maxlength="150">
+
+        <label for="photo">Personal Photo *</label>
+        <input id="photo" type="file" accept="image/jpeg,image/png,image/webp" required>
+
+        <label for="cv">CV *</label>
+        <input id="cv" type="file" accept=".pdf,.doc,.docx" required>
+
+        <label for="video">Introduction Video (optional, max 30 seconds)</label>
+        <input id="video" type="file" accept="video/mp4,video/webm,video/quicktime">
+
+        <button type="submit">Submit Application</button>
+        <p id="status" class="status"></p>
+      </form>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
